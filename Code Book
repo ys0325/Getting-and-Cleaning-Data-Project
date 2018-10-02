@@ -1,0 +1,99 @@
+Description
+Each row represents 1 Subject and 1 Activity. The raw data included multiple measurement observations for each Subject and Activity, so these were averaged together for the final tidy dataset.
+
+Identifiers
+2 columns in the dataset serve as Identifiers:
+
+SubjectID - The ID for the subject participating in the experiment
+Ranges from 1 to 30
+Activity - The type of activity performed by the subject for which the measurements were taken
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
+Measurements
+The remaining columns are measurements taken by the smartphone for each Subject and Activity.
+
+columns<-colnames(tidydata)[-c(1,2)]
+cat(paste('*', columns), sep = '\n') 
+TimeBodyAccelerometerMeanX
+TimeBodyAccelerometerMeanY
+TimeBodyAccelerometerMeanZ
+TimeGravityAccelerometerMeanX
+TimeGravityAccelerometerMeanY
+TimeGravityAccelerometerMeanZ
+TimeBodyAccelerometerJerkMeanX
+TimeBodyAccelerometerJerkMeanY
+TimeBodyAccelerometerJerkMeanZ
+TimeBodyGyroscopeMeanX
+TimeBodyGyroscopeMeanY
+TimeBodyGyroscopeMeanZ
+TimeBodyGyroscopeJerkMeanX
+TimeBodyGyroscopeJerkMeanY
+TimeBodyGyroscopeJerkMeanZ
+TimeBodyAccelerometerMagnitudeMean
+TimeGravityAccelerometerMagnitudeMean
+TimeBodyAccelerometerJerkMagnitudeMean
+TimeBodyGyroscopeMagnitudeMean
+TimeBodyGyroscopeJerkMagnitudeMean
+FrequencyBodyAccelerometerMeanX
+FrequencyBodyAccelerometerMeanY
+FrequencyBodyAccelerometerMeanZ
+FrequencyBodyAccelerometerJerkMeanX
+FrequencyBodyAccelerometerJerkMeanY
+FrequencyBodyAccelerometerJerkMeanZ
+FrequencyBodyGyroscopeMeanX
+FrequencyBodyGyroscopeMeanY
+FrequencyBodyGyroscopeMeanZ
+FrequencyBodyAccelerometerMagnitudeMean
+FrequencyBodyAccelerometerJerkMagnitudeMean
+FrequencyBodyGyroscopeMagnitudeMean
+FrequencyBodyGyroscopeJerkMagnitudeMean
+TimeBodyAccelerometerStdX
+TimeBodyAccelerometerStdY
+TimeBodyAccelerometerStdZ
+TimeGravityAccelerometerStdX
+TimeGravityAccelerometerStdY
+TimeGravityAccelerometerStdZ
+TimeBodyAccelerometerJerkStdX
+TimeBodyAccelerometerJerkStdY
+TimeBodyAccelerometerJerkStdZ
+TimeBodyGyroscopeStdX
+TimeBodyGyroscopeStdY
+TimeBodyGyroscopeStdZ
+TimeBodyGyroscopeJerkStdX
+TimeBodyGyroscopeJerkStdY
+TimeBodyGyroscopeJerkStdZ
+TimeBodyAccelerometerMagnitudeStd
+TimeGravityAccelerometerMagnitudeStd
+TimeBodyAccelerometerJerkMagnitudeStd
+TimeBodyGyroscopeMagnitudeStd
+TimeBodyGyroscopeJerkMagnitudeStd
+FrequencyBodyAccelerometerStdX
+FrequencyBodyAccelerometerStdY
+FrequencyBodyAccelerometerStdZ
+FrequencyBodyAccelerometerJerkStdX
+FrequencyBodyAccelerometerJerkStdY
+FrequencyBodyAccelerometerJerkStdZ
+FrequencyBodyGyroscopeStdX
+FrequencyBodyGyroscopeStdY
+FrequencyBodyGyroscopeStdZ
+FrequencyBodyAccelerometerMagnitudeStd
+FrequencyBodyAccelerometerJerkMagnitudeStd
+FrequencyBodyGyroscopeMagnitudeStd
+FrequencyBodyGyroscopeJerkMagnitudeStd
+Transformation
+To get from the Raw Data to the Tidy Data the following transformations were made. These transformations can be executed with the script ‘run_analysis.R’.
+
+Merged the training and test sets to create one data set.
+
+Extracted only the measurements on the mean and standard deviation for each measurement.
+
+Used descriptive activity names to name the activities in the data set.
+
+Appropriately labeled the data set with descriptive variable names.
+
+From the data set in step 4, created a second, independent tidy data set with the average of each variable for each activity and each subject.
+
