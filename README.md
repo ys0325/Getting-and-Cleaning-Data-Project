@@ -1,4 +1,10 @@
 # Getting-and-Cleaning-Data-Project
+This repository contains the following files:
+1. README.md, this file, which provides an overview of the data set and how it was created.
+2. tidy.txt, which contains the data set.
+3. CodeBook.md, the code book, which describes the contents of the data set (data, variables and transformations used to generate the data).
+4. run_analysis.R, the R script that was used to create the data set (see the Creating the data set section below)
+
 This is the course project for the Getting and Cleaning Data Coursera course. The R script, run_analysis.R, does the following:
 
 1. Download the dataset if it does not already exist in the working directory
